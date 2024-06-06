@@ -668,9 +668,7 @@
 
             updateClock();
             setInterval(updateClock, 1000);
-            if (isHomePage()) {
-                updateCounter();
-            }
+            updateCounter();
             getLocation();
             document.getElementById('contact-form').addEventListener('submit', function(event) {
                 event.preventDefault();
@@ -699,10 +697,6 @@
             counter++;
             localStorage.setItem('visitCounter', counter);
             document.getElementById('counter').textContent = counter;
-        }
-
-        function isHomePage() {
-            return window.location.pathname.includes('index.html');
         }
 
         function searchTopic() {
@@ -1068,4 +1062,4 @@
         </main>
     </div>
 </body>
-</html>
+</html> 
