@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historia de la Fórmula 1</title>
+    <link rel="icon" type="image/x-icon" href="images/FaviconNoutil.ico">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f2f5;
+            position: relative;
+            min-height: 100vh;
+        }
+        .btn-custom {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        .btn-custom:hover {
+            background-color: #c82333;
+            color: white;
+            transform: scale(1.05);
+        }
+        .btn-custom svg {
+            margin-left: 8px;
+            transition: transform 0.3s ease;
+        }
+        .btn-custom svg.left {
+            margin-left: 0;
+            margin-right: 8px;
+        }
+        .btn-custom:hover svg {
+            transform: translateX(5px);
+        }
+        .btn-custom:hover svg.left {
+            transform: translateX(-5px);
+        }
+        .header-bg {
+            background: linear-gradient(135deg, #343a40 0%, #495057 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+        .header-bg h1 {
+            font-size: 3.5em;
+            font-weight: bold;
+            background: linear-gradient(135deg, #ff0000, #d3d3d3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            margin: 0;
+        }
+        .nav-link-custom {
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .nav-link-custom:hover {
+            text-decoration: underline;
+        }
+        .static-data {
+            background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+            color: white;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .content-section {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .info-section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #dc3545;
+        }
+        .info-section p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #333;
+        }
+        #user-input {
+            border: 1px solid #dc3545;
+        }
+        #user-info {
+            font-size: 1.1em;
+            color: #dc3545;
+        }
+        .next-topic-btn {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            padding: 12px 25px;
+        }
+        .clock {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: #ff3333; /* Rojo más fuerte */
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" defer></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" defer></script>
+    <script>
+        function saveInfo() {
+            const userInput = document.getElementById('user-input').value;
+            document.getElementById('user-info').innerText = userInput;
+        }
+
+        function clearInfo() {
+            document.getElementById('user-info').innerText = '';
+            document.getElementById('user-input').value = '';
+        }
+
+        function updateClock() {
+            const now = new Date();
+            const formattedDate = now.toLocaleDateString();
+            const formattedTime = now.toLocaleTimeString();
+            document.getElementById('clock').innerText = `${formattedDate} -- ${formattedTime}`;
+        }
+
+        setInterval(updateClock, 1000);
+        window.onload = updateClock;
+    </script>
+</head>
+<body>
+    <header class="header-bg py-4">
+        <h1>Historia de la Fórmula 1</h1>
+        <div id="clock" class="clock"></div>
+          <a class="btn btn-custom" href="index.html">
+                &#8592;
+                Inicio
+            </a>
+        </nav>
+    </header>
+    <main id="main-content" class="container py-4">
+        <div class="static-data">
+            <p>Año de Inicio: 1950 | Primer Campeón: Giuseppe Farina | Equipos Dominantes: Ferrari, Mercedes, Red Bull</p>
+        </div>
+        <div class="row">
+            <section class="info-section col-md-12 mb-4">
+                <h2>Introducción</h2>
+                <div class="content-section">
+                    <p>La Fórmula 1, también conocida como F1, es la categoría reina del automovilismo mundial. Fundada en 1950, la Fórmula 1 ha sido testigo de innumerables momentos históricos, avances tecnológicos y rivalidades épicas que han capturado la imaginación de los fanáticos de los deportes de motor en todo el mundo.</p>
+                    <p>Desde sus humildes comienzos hasta convertirse en un espectáculo global, la Fórmula 1 ha evolucionado constantemente para mantenerse a la vanguardia del deporte y la ingeniería. En esta página, exploraremos la rica historia de la Fórmula 1, desde sus primeros días hasta la era moderna.</p>
+                </div>
+            </section>
+            <section class="info-section col-md-6 mb-4">
+                <h2>Los Primeros Años</h2>
+                <div class="content-section">
+                    <p>Los primeros años de la Fórmula 1 fueron una época de pioneros y aventureros. La primera temporada oficial se celebró en 1950, con el Gran Premio de Gran Bretaña en Silverstone como la carrera inaugural. Giuseppe Farina se coronó como el primer campeón del mundo, pilotando un Alfa Romeo.</p>
+                    <p>Durante la década de 1950, la Fórmula 1 fue dominada por marcas legendarias como Alfa Romeo, Ferrari, y Maserati. Los circuitos eran peligrosos y las medidas de seguridad eran prácticamente inexistentes, lo que resultaba en carreras emocionantes pero a menudo trágicas.</p>
+                    <p>Juan Manuel Fangio, un piloto argentino, se convirtió en una leyenda al ganar cinco campeonatos mundiales en esta década, un récord que se mantuvo durante muchos años. Su habilidad para manejar en diversas condiciones y su destreza técnica lo convirtió en uno de los grandes íconos del deporte.</p>
+                </div>
+            </section>
+            <section class="info-section col-md-6 mb-4">
+                <h2>Era Moderna</h2>
+                <div class="content-section">
+                    <p>La era moderna de la Fórmula 1 comenzó en la década de 1980, cuando la tecnología y la innovación empezaron a jugar un papel crucial en el deporte. La introducción de motores turboalimentados, la electrónica avanzada y la aerodinámica sofisticada transformaron la Fórmula 1 en un laboratorio de alta tecnología sobre ruedas.</p>
+                    <p>En los años 90, la rivalidad entre Ayrton Senna y Alain Prost capturó la atención de los aficionados, mientras que los avances en la seguridad de los coches y los circuitos ayudaron a reducir el número de accidentes fatales. El trágico accidente de Senna en 1994 llevó a una revisión significativa de las normas de seguridad.</p>
+                    <p>En el nuevo milenio, Michael Schumacher y Ferrari dominaron la competición, estableciendo nuevos estándares de excelencia. Más recientemente, Lewis Hamilton y Mercedes han dejado una huella indeleble en la Fórmula 1 moderna, con múltiples campeonatos consecutivos.</p>
+                    <p>La sostenibilidad y la eficiencia energética también han tomado protagonismo, con la introducción de unidades de potencia híbridas y la promoción de tecnologías ecológicas. La Fórmula 1 sigue evolucionando, manteniendo su esencia de velocidad y competencia, mientras se adapta a los desafíos del futuro.</p>
+                </div>
+            </section>
+        </div>
+        <div class="row">
+            <section class="info-section col-md-12 mb-4">
+                <h2>Escribe tu propia información</h2>
+                <div class="content-section">
+                    <textarea class="form-control" rows="5" id="user-input" placeholder="Añade más información sobre la historia de la Fórmula 1 aquí..."></textarea>
+                    <button class="btn btn-custom mt-3" onclick="saveInfo()">Guardar Información</button>
+                    <button class="btn btn-custom mt-3" onclick="clearInfo()">Borrar Información</button>
+                </div>
+            </section>
+            <section id="additional-info" class="info-section col-md-12 mb-4">
+                <div class="content-section">
+                    <h3>Información Adicional</h3>
+                    <p id="user-info"></p>
+                </div>
+            </section>
+        </div>
+        <a class="btn btn-custom next-topic-btn" href="tema2.html">
+            Siguiente Tema
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1.5 8a.5.5 0 0 1 .5-.5h12.793L10.146 3.854a.5.5 0 1 1 .708-.708l4.5 4.5a.5.5 0 0 1 0 .708l-4.5 4.5a.5.5 0 0 1-.708-.708L14.793 8.5H2a.5.5 0 0 1-.5-.5z"/>
+            </svg>
+        </a>
+    </main>
+    <script>
+        function saveInfo() {
+            const userInput = document.getElementById('user-input').value;
+            document.getElementById('user-info').innerText = userInput;
+        }
+
+        function clearInfo() {
+            document.getElementById('user-info').innerText = '';
+            document.getElementById('user-input').value = '';
+        }
+
+        function updateClock() {
+            const now = new Date();
+            const formattedDate = now.toLocaleDateString();
+            const formattedTime = now.toLocaleTimeString();
+            document.getElementById('clock').innerText = `${formattedDate} -- ${formattedTime}`;
+        }
+
+        setInterval(updateClock, 1000);
+        window.onload = updateClock;
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
