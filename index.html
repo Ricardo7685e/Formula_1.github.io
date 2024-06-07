@@ -188,7 +188,7 @@
             transform: translateY(-2px);
         }
 
-        h2 {
+        h2, .section-title {
             font-size: 28px;
             font-weight: bold;
             text-align: center;
@@ -204,7 +204,7 @@
             margin: 20px 0;
         }
 
-        h2::after {
+        h2::after, .section-title::after {
             content: '';
             position: absolute;
             left: 50%;
@@ -590,6 +590,22 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             background-color: #f9f9f9;
             border: 2px solid #ddd;
+        }
+
+        #creation-updated-info,
+        #sources {
+            flex: 1;
+            margin: 10px;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        #sources ul {
+            text-align: left;
+            padding-left: 20px;
         }
 
         #google-search-form div {
@@ -1059,7 +1075,22 @@
                     </form>
                 </section>
             </div>
+            <div id="creation-updated-info">
+                <h2 class="section-title">Fecha de creación y última actualización</h2>
+                <p><strong>Fecha de creación:</strong> 01/01/2024</p>
+                <p><strong>Última actualización:</strong> 06/06/2024</p>
+            </div>
+            <div id="sources">
+                <h2 class="section-title">Fuentes de Información de Fórmula 1</h2>
+                <ul>
+                    <li><a href="https://www.formula1.com/" target="_blank">Página oficial de Fórmula 1</a></li>
+                    <li><a href="https://es.motorsport.com/" target="_blank">Motorsport - Noticias de Fórmula 1</a></li>
+                    <li><a href="https://www.autosport.com/f1/" target="_blank">Autosport - Noticias y análisis de Fórmula 1</a></li>
+                    <li><a href="https://the-race.com/formula-1/" target="_blank">The Race - Análisis y noticias de Fórmula 1</a></li>
+                </ul>
+            </div>
         </main>
     </div>
 </body>
-</html> 
+</html>
+
